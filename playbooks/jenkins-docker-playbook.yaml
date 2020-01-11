@@ -183,10 +183,10 @@
   hosts: jenkins
   become: yes
   tasks:
-  - name: "reload jenkins"
+  - name: "restart jenkins"
     service:
       name: jenkins
-      state: reloaded
+      state: restarted
   - name: "clone repo"
     git:
      repo: "https://github.com/TheBartThe/assassinsGuildTest"
