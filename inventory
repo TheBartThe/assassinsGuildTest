@@ -1,0 +1,24 @@
+[jenkins]
+assassin-ansible-jenkins-test
+
+[docker]
+assassin-ansible-jenkins-test
+assassin-ansible-deploy-test
+
+[swarm-master]
+assassin-ansible-deploy-test
+
+[jenkins:vars]
+ansible_user=vieran96
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[docker:vars]
+ansible_user=vieran96
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[swarm-master:vars]
+ansible_user=vieran96
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
